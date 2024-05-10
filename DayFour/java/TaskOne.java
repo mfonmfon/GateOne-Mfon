@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class TaskOne{
 
@@ -6,38 +7,32 @@ public class TaskOne{
 
 	Scanner scan = new Scanner(System.in);
 	
-	
 
-	int[][] numbers = new int[3][3];
-
-	int input = 0;
+	char[][] numbers = new char [3][3];
+	int userInput = 0;
 
 	for(int index = 0; index < numbers.length; index++){
-
 		for(int indexTwo = 0; indexTwo < numbers.length; indexTwo++){
-
 			System.out.print("Play this game by entering x and 0:   ");
 			numbers[index][indexTwo] =  scan.next().charAt(0);
 
 			if(numbers.equals(0) || numbers.equals("x")){
-				//input = numbers[index][indexTwo];
-
+				
 			}
 			
 		}
 		
 	}
 
-		for(int index = 0; index < numbers.length; index++){
-			for(int indexTwo = 0; indexTwo < numbers.length; indexTwo++){
-				System.out.print(numbers);
-
+		for(int counter = 0; counter < numbers.length; counter++){
+			for(int counterTwo = 0; counterTwo < numbers.length; counterTwo++){
+				System.out.println(Arrays.deepToString(numbers[counter][counterTwo]));
 
 			}
 
 		}
+		
 		System.out.println();
-
 
 }
 

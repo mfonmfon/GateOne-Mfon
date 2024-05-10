@@ -12,7 +12,7 @@ for(let index = 0; index < 8; index++){
 
 		if(array == games || array == character){
 			
-		console.log(arrayx);
+		
 		}
 
 }
@@ -20,3 +20,11 @@ for(let index = 0; index < 8; index++){
 
 
 }
+
+
+for(let index = 0; index < 8; index++){
+
+	
+
+}
+console.log(array);
