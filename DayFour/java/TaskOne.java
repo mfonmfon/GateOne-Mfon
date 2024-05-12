@@ -29,6 +29,7 @@ public class TaskOne{
 				System.out.println(Arrays.deepToString(numbers[counter][counterTwo]));
 
 			}
+			System.out.println();
 
 		}
 		
