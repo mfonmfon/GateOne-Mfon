@@ -41,8 +41,13 @@ public class MenstrualApp{
 	System.out.println("How long did the period last");
 	int durationOfThePeriod = scan.nextInt();
 
+	LocalDate date = LocalDate.now();
+
 	int cycleDate = beginningOfPeriod - durationOfThePeriod;
+	int average = cycleDate / beginningOfPeriod; 
 	System.out.println(" Hello " + userName + " the period last for: " + cycleDate);
+	System.out.println("The average of the days is " + average);
+	
 
 	}
 	
