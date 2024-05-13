@@ -31,27 +31,6 @@ public class TaskOne{
 	
 	}
 
-	public static void main(String... args){
-
-	Scanner scan = new Scanner(System.in);
-
-
-	//String cardNumber = cardNumber.charAt(4);
-
-	System.out.println("Enter your ATM card for validation");
-	int cardNumber = scan.nextInt();
-
-
-
-	
-
-	
-
-
-
-	}
-
-
 	
 
 
