@@ -6,49 +6,86 @@ public class MenstrualApp{
 	public static void main(String... args){
 	Scanner scan = new Scanner(System.in);
 	System.out.println("Welcome to MyChekker helathcare, ");
-	String option = """ 
+	System.out.println();
+	System.out.println("We are on a mission to improve the well-being of all women");
+	System.out.println(""" 
 	Your data is very secure with us here
 	
 	1. -> signUp
 	2. -> Login
 	
-	""";
+	""");
+	int option = scan.nextInt();
 	switch(option){
 
-	case "signUp": 
-		System.out.println("signUp");
-	case  "Login": 
-		System.out.println("Login");
-	}
-	System.out.println(option);
-	System.out.println("Enter your name: ");
-	String userName = scan.next();
+	case 1: 
+		System.out.println("Enter your name: ");
+		String userName = scan.next();
 
-	System.out.print("How old are you? ");
-	int userAge = scan.nextInt();
-	if(userAge < 12){
-		System.out.println("Opoos!! The age you entered is below the normal age we expect for adults check the programme again  or\n This menstrual app can only be checked for those only from the age 12 ");
+		System.out.print("How old are you? ");
+		int userAge = scan.nextInt();
+		if(userAge < 12){
+			System.out.println("Opoos!! The age you entered is below the normal age we expect for adults check the programme again  or\n This menstrual app can only be checked for those only from the age 12 ");
 
-	}
-	else{
+		}
+		//else{
+	case 2: 
 	System.out.println("Answer the following questions to calculate when next your period will come");
 	System.out.println();
 	System.out.println();
 	
-	System.out.println("When was the first day of the last day you had your period : ");
-	int beginningOfPeriod = scan.nextInt();
+	System.out.println("What are the signs of your period coming");
+	
+	System.out.println("""
+__________________________________________________________
+..........................................................
+	1. Tender breasts
 
-	System.out.println("How long did the period last");
-	int durationOfThePeriod = scan.nextInt();
+	2. Acne-prone skin
 
-	LocalDate date = LocalDate.now();
+	3. Menstrual cramps
 
-	int cycleDate = beginningOfPeriod - durationOfThePeriod;
-	int average = cycleDate / beginningOfPeriod; 
-	System.out.println(" Hello " + userName + " the period last for: " + cycleDate);
-	System.out.println("The average of the days is " + average);
+	4. Mood swings
+
+	5. Feeling bloated
+
+	6. Feeling very tired
+
+	7. Dry discharge
+___________________________________________________________
+...........................................................
+	 """);
+
+	//int periodSigns = scan.nextInt();
+
+	String questions = scan.next();
+	
+	if(questions.equals(1)){
+	
+		System.out.print("When did your last period start: ");
+		String beginningOfPeriod = scan.next();
+
+		System.out.print("How many days did it last: ");
+		int durationOfThePeriod = scan.nextInt();
+
+		System.out.print("What is the average length of the menstruation: ");
+		int cycleLength = scan.nextInt();
+
+		LocalDate date = LocalDate.now();
+
 	
 
+	//int cycleDate = beginningOfPeriod - durationOfThePeriod;
+	//int average = cycleDate / beginningOfPeriod; 
+	//System.out.println(" Hello " + userName + " the period last for: " + cycleDate);
+	//System.out.println("The average of the days is " + average);
+	
+
+}
+else{
+System.out.println("invalid input");
+
+}
 	}
 	
 
