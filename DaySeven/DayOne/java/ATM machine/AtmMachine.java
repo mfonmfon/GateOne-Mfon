@@ -7,7 +7,43 @@ public class AtmMachine{
 
 
 
-	String userPin = "4";
+	System.out.println("Select your language preference");
+
+				System.out.println("""
+				_____________________________________________________
+				..................................................... 
+						
+						Select Language	
+				_____________________________________________________
+				.....................................................
+					1. Yoruba
+					2. Igbo
+					3. Ibibio
+					4. Hausa
+					5. English
+				
+				""");
+				int userLanguage = scan.nextInt();
+			
+				switch(userLanguage){
+
+					case 1:
+						System.out.println("Sorry! The Yoruba language is not up to date on this machine. ");
+						break;
+
+					case 2:
+						System.out.println("Sorry! The Igbo language is not up to date on this machine. ");
+						break;
+					case 3: 
+						System.out.println("Sorry! The Ibibio language is not up to date on this machine. ");
+						break;
+					case 4:
+						System.out.println("Sorry! The Hausa language is not up to date on this machine. ");
+						break;
+
+
+					case 5:
+						String userPin = "4";
 	System.out.println("""
 
 ____________________________________________
@@ -19,9 +55,9 @@ ____________________________________________
 
 	1. Create an account 
 
-	2. Close account
+	2. Deposit Money
 
-	3. Deposit money
+	3. Close account
 
 	4. Withdraw money
 
@@ -40,6 +76,7 @@ ____________________________________________
 
 		switch(option){
 			case 1:
+
 				System.out.println("Open an account to enjoy safe, versatile and convenient banking with Banke Bank");
 				System.out.println();
 		
@@ -79,37 +116,11 @@ ____________________________________________
 						System.out.println("Hello " + userFirstName + " " + userSecondName + " "  );
 						System.out.println("your account  was created successfully>>>>>>>>>");
 
-
 					}
+					
 
-				
-
-			case 4:
-				System.out.println("Select your language preference");
-
-				System.out.println("""
-				_____________________________________________________
-				..................................................... 
-						
-						Select Language	
-				_____________________________________________________
-				.....................................................
-					1. Yoruba
-					2. English
-					3. Igbo
-					4. Ibibio
-					5. Hausa
-				
-				""");
-
-				int userLanguage = scan.nextInt();
-			
-				switch(userLanguage){
-
-					case 1:
-						System.out.println("Sorry! The Yoruba language is not up to date on this machine. ");
-						break;
-					case 2:
+//i replace the language here					
+					case 4:
 						System.out.println("Enter your 4 digit ATM pin ");
 						userPin = scan.next();
 
@@ -122,21 +133,21 @@ ____________________________________________
 							}else{
 								System.out.println("""
 									
-							____________________________________________________________
- 							............................................................
+						____________________________________________________________
+ 						............................................................
 									
-											Account Type
-								____________________________________________________
-								....................................................
+										Account Type
+
+						____________________________________________________________
+						.............................................................
 										1. Savings Account
 		
 										2. Current Account
 
 								""");
+								
 							       int accountType = scan.nextInt();
-
 								switch(accountType){
-
 									case 1:
 										System.out.println("Enter the amount you want to withdraw");
 										
@@ -144,42 +155,55 @@ ____________________________________________
 										1. 1000       4. 10000
 										
 										2. 2000	      5. 20000
-
-										3. 5000
-
-										
-
-
+									
+										3. 5000	      6. Others
 
 										""");
 
 										int withdrawAmount = scan.nextInt();
 
-										
-								};
+								switch(withdrawAmount){
 
+									case 1:
+
+										System.out.println("Take Cash");
+										break;
+									case 2:
+										System.out.println("Take Cash");
+										break;
+									case 3:
+										System.out.println("Take Cash");
+										break;
+									case 4:
+										System.out.println("Take Cash");
+										break;
+									case 5:
+										System.out.println("Take Cash");
+										break;
+									case 6:
+										System.out.println("Enter Amount: ");
+										int cashAmount = scan.nextInt();
+
+
+										//System.out.println("Atm");
+										break;
+
+								}
+								
+								}
 
 							}
-						System.out.println("");
-						break;
-
-					case 3:
-						System.out.println("Sorry! The Igbo language is not up to date on this machine. ");
-						break;
-					case 4: 
-						System.out.println("Sorry! The Ibibio language is not up to date on this machine. ");
-						break;
-					case 5:
-						System.out.println("Sorry! The Hausa language is not up to date on this machine. ");
-						break;
+						
+					
 
 				
 				}
+					
 				
 
 			}
 		}
-	
+
 	
 
 
