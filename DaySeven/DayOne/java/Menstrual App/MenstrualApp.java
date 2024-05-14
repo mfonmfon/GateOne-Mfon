@@ -55,13 +55,14 @@ __________________________________________________________
 ___________________________________________________________
 ...........................................................
 	 """);
+	int periodSigns = scan.nextInt();
 
-	//int periodSigns = scan.nextInt();
 
-	String questions = scan.next();
-	
-	if(questions.equals(1)){
-	
+System.out.println("Select the options above ");
+	int questions = scan.nextInt();
+	switch(questions){
+
+	case 1:
 		System.out.print("When did your last period start: ");
 		String beginningOfPeriod = scan.next();
 
@@ -71,21 +72,89 @@ ___________________________________________________________
 		System.out.print("What is the average length of the menstruation: ");
 		int cycleLength = scan.nextInt();
 
-		LocalDate date = LocalDate.now();
+		//LocalDate date = LocalDate.now();
+		break;
+		
+
+	case 2:
+		System.out.print("When did your last period start: ");
+		beginningOfPeriod = scan.next();
+
+		System.out.print("How many days did it last: ");
+		durationOfThePeriod = scan.nextInt();
+
+		System.out.print("What is the average length of the menstruation: ");
+		cycleLength = scan.nextInt();
+		break;
+
+
+	case 3:
+		System.out.print("When did your last period start: ");
+		beginningOfPeriod = scan.next();
+
+		System.out.print("How many days did it last: ");
+		durationOfThePeriod = scan.nextInt();
+
+		System.out.print("What is the average length of the menstruation: ");
+		cycleLength = scan.nextInt();
+
+
+
+	case 4:
+		System.out.print("When did your last period start: ");
+		beginningOfPeriod = scan.next();
+
+		System.out.print("How many days did it last: ");
+		durationOfThePeriod = scan.nextInt();
+
+		System.out.print("What is the average length of the menstruation: ");
+		cycleLength = scan.nextInt();
+		break;
+
+
+	case 5:
+		System.out.print("When did your last period start: ");
+		beginningOfPeriod = scan.next();
+
+		System.out.print("How many days did it last: ");
+		durationOfThePeriod = scan.nextInt();
+
+		System.out.print("What is the average length of the menstruation: ");
+		cycleLength = scan.nextInt();
+		break;
+
+
+	case 6:
+		System.out.print("When did your last period start: ");
+		beginningOfPeriod = scan.next();
+
+		System.out.print("How many days did it last: ");
+		durationOfThePeriod = scan.nextInt();
+
+		System.out.print("What is the average length of the menstruation: ");
+		cycleLength = scan.nextInt();
+
+		break;
+
+	case 7:
+		System.out.print("When did your last period start: ");
+		beginningOfPeriod = scan.next();
+
+		System.out.print("How many days did it last: ");
+		durationOfThePeriod = scan.nextInt();
+
+		System.out.print("What is the average length of the menstruation: ");
+		cycleLength = scan.nextInt();
+
+
+	default:
+
+		System.out.println("Oops!! you entered the wrong input...");
 
 	
-
-	//int cycleDate = beginningOfPeriod - durationOfThePeriod;
-	//int average = cycleDate / beginningOfPeriod; 
-	//System.out.println(" Hello " + userName + " the period last for: " + cycleDate);
-	//System.out.println("The average of the days is " + average);
 	
+	}
 
-}
-else{
-System.out.println("invalid input");
-
-}
 	}
 	
 
@@ -93,6 +162,6 @@ System.out.println("invalid input");
 	}
 
 
-
-
 }
+
+
