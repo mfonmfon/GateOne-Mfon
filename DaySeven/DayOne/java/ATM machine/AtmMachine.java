@@ -63,9 +63,9 @@ ____________________________________________
 
 	3. Check Account Balance
 
-	4. Withdraw money	
+	4. Transfer Money to another account
 
-	5. Transfer Money to another account
+	5. Withdraw money	
 
 	6. Change Pin
 	
@@ -96,7 +96,7 @@ ____________________________________________
 				Long idNumber = scan.nextLong();
 
 				System.out.println("Let's get started with your Name and pin");
-
+				System.out.println();
 				System.out.println("Enter your first name: ");
 				String userFirstName = scan.next();
 
@@ -172,8 +172,66 @@ ____________________________________________
 					System.out.print("Your current balance is " + totalAmount);
 					
 					break;
-					
+
 				case 4:
+					System.out.println("Enter your 4 digit Atm pin: ");
+					userPin = scan.next();
+
+					if(userPin.length() > 4){
+						System.out.println("Incorrec Pin.\nYour pin must be 4 digit only");								
+					}
+					else if(userPin.length() < 4){
+						System.out.println("Incorrec Pin.\nYour pin must be 4 digit only");
+								
+					}else{
+								
+
+
+						System.out.println("""
+									
+						____________________________________________________________
+ 						............................................................
+									
+									Account Type
+
+						____________________________________________________________
+						.............................................................
+									1. Savings Account
+		
+									2. Current Account
+
+								""");
+								
+							       int accountType = scan.nextInt();
+								switch(accountType){
+									case 1:
+										System.out.println("Enter the amount you want to transfer");
+										
+										System.out.println(""" 
+										1. 1000       4. 10000
+										
+										2. 2000	      5. 20000
+									
+										3. 5000	      6. Others
+
+										""");
+
+										int transfer = scan.nextInt();
+
+
+							System.out.println("Enter bank account: ");
+							accountNumber = scan.nextInt();
+
+		
+							
+
+					
+								
+					
+
+
+					
+				case 5:
 						System.out.println("Enter your 4 digit ATM pin ");
 						userPin = scan.next();
 
@@ -199,7 +257,7 @@ ____________________________________________
 
 								""");
 								
-							       int accountType = scan.nextInt();
+							       accountType = scan.nextInt();
 								switch(accountType){
 									case 1:
 										System.out.println("Enter the amount you want to withdraw");
@@ -257,20 +315,29 @@ ____________________________________________
 
 
 										}
-											
-										
-										
-									break;
+										default:
+											System.out.println("Opoos! you've entered the wrong input");
+									
+										break;
 
-									default:
-										System.out.println("Opoos! you've entered the wrong input");
-								
-								}
-								
+									
+
 										
-											
+							//This is the Transfer app
+
 								
-								}
+							}
+
+						
+								
+							}
+
+							}
+				
+								
+							}
+
+
 
 							}
 						
