@@ -42,15 +42,59 @@ ________________________________________________________________________+
 print("Select the option")
 
 match sympthoms:
-	case "Tender breasts":
+	case 1:
 		period_start_date = input("When did your last period start: ")
 		
 		period_duration = int(input("How many days did it last: "))
 
 		cycleLength = int(input("What is the average length of the menstruation"))
-		#break
+		break
 		
 
+	case 2:
+		period_start_date = input("When did your last period start: ")
+		period_duration = int(input("How many days did it last: "))
+
+		cycleLength = int(input("What is the average length of the menstruation"))
+		break
+	case 3:
+		period_start_date = input("When did your last period start: ")
+		period_duration = int(input("How many days did it last: "))
+
+		cycleLength = int(input("What is the average length of the menstruation"))
+
+		break
+	case 4:
+
+		period_start_date = input("When did your last period start: ")
+		period_duration = int(input("How many days did it last: "))
+
+		cycleLength = int(input("What is the average length of the menstruation"))
+		break
+	case 5:
+		period_start_date = input("When did your last period start: ")
+		period_duration = int(input("How many days did it last: "))
+
+		cycleLength = int(input("What is the average length of the menstruation"))
+		break
+	case 6:
+
+		period_start_date = input("When did your last period start: ")
+		period_duration = int(input("How many days did it last: "))
+
+		cycleLength = int(input("What is the average length of the menstruation"))
+		break
+	case 7:
+		period_start_date = input("When did your last period start: ")
+		period_duration = int(input("How many days did it last: "))
+
+		cycleLength = int(input("What is the average length of the menstruation"))
+		break
+
+	case_:
+		print("Invalid input")
+		
+		
 
 	
 		
