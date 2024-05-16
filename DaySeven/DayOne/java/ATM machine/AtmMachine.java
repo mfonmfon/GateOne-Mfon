@@ -61,9 +61,9 @@ _________________________________________________
 |                                                |
 |	3. Check Account Balance                 |
 |                                                |
-|	4. Withdraw money	                 |
+|	4. Transfer	                         |
 |                                                |
-|	5. Transfer Money to another account     |                 
+|	5. Withdraw                              |                 
 |                                                |
 |	6. Change Pin	                         |
 |	                                         |
@@ -183,8 +183,8 @@ _________________________________________________
 
 								""");
 								
-							       int accountType = scan.nextInt();
-								switch(accountType){
+							       int transferAccountType = scan.nextInt();
+								switch(transferAccountType){
 									case 1:
 										System.out.println("Enter the amount you want to transfer");
 										
@@ -217,8 +217,7 @@ _________________________________________________
 							System.out.println("your main balance is " + (totalAmount + transferAmount));
 							}
 							break;
-							
-//this is the withdraw features				
+											
 
 					case 5:
 							System.out.println("Enter your 4 digit ATM pin ");
@@ -229,7 +228,8 @@ _________________________________________________
 							}
 							else if(userPin.length() < 4){
 								System.out.println("Incorrect Pin.\nYour pin must be 4 digit only");
-							}else{
+							}
+							else{
 	
 							
 							
@@ -248,8 +248,8 @@ _________________________________________________
 
 								""");
 								
-							       accountType = scan.nextInt();
-								switch(accountType){
+							      int  withdrawAccountType = scan.nextInt();
+								switch(withdrawAccountType){
 									case 1:
 										System.out.println("Enter the amount you want to withdraw");
 										
@@ -302,12 +302,12 @@ _________________________________________________
 
 											System.out.println("Do you want to perform another transaction ");
 											String userResponse = scan.next();
-											
+											}
 										
 										
-										//default:
-											//System.out.println("Opoos! you've entered the wrong input");
-										}
+										default:
+											System.out.println("Opoos! you've entered the wrong input");
+										
 										break;
 										}
 
