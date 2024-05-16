@@ -5,14 +5,13 @@ public class MenstrualApp{
 
 	public static void main(String... args){
 	Scanner scan = new Scanner(System.in);
-
-	//int cycleLength = 35;
+	//cycleLength;
+	//beginningOfPeriod;
 
 	System.out.println("Welcome to MyChekker healthcare, ");
 	System.out.println();
 	System.out.println("We are on a mission to improve the well-being of all women");
 	System.out.println(""" 
-
 	Your data is very secure with us here
 	
 	1. -> signUp
@@ -22,11 +21,9 @@ public class MenstrualApp{
 	""");
 	int option = scan.nextInt();
 	switch(option){
-
 	case 1: 
 		System.out.println("Enter your name: ");
 		String userName = scan.next();
-
 		System.out.print("How old are you? ");
 		int userAge = scan.nextInt();
 		if(userAge < 12){
@@ -35,17 +32,13 @@ public class MenstrualApp{
 		}
 		else{
 			System.out.println("Hello " + userName + "," + " welcome to MyChekker healthcare where you can keep track of your period. Trust us all you informations are safe and private with us.");
-			
-
 		}
-		
 	case 2: 
 	System.out.println("Answer the following questions to calculate when next your period will come");
 	System.out.println();
 	System.out.println();
 	
 	System.out.println("What are the signs of your period coming");
-	
 	System.out.println("""
 __________________________________________________________
 ..........................................................
@@ -65,119 +58,49 @@ __________________________________________________________
 ___________________________________________________________
 ...........................................................
 	 """);
-
 	System.out.println("Select the options above ");
-	int questions = scan.nextInt();
+	String questions = scan.next();
+		while(true){
 
-	switch(questions){
-	case 1:
+		System.out.println("This is  one of the symthoms that tells that your period is aproaching!");
+		System.out.println();
 
-		System.out.println(" Tender breasts is a one of the symthoms that tells that your period is aproaching!");
-
-		System.out.print("Enter the first day you saw your period using the format (DD-MM-YY)");
+		System.out.println("Enter your first name and last name: ");
+		userName = scan.next();
+		System.out.println();
+		System.out.print("Enter the first day you saw your period using the format (DD-MM-YYYY): ");
 		String beginningOfPeriod = scan.next();
 
-		System.out.print("What is your average ovolution cycle length:  ");
+		//if(beginning == "dd/MM/yyyy"){
+			//System.out.println("");
+
+		//}
+
+		System.out.println();
+		System.out.print("What is your average ovulution cycle length:  ");
 		int cycleLength = scan.nextInt();
+		int ovulation = 14;
 
-		int lengthOfOvulation = 14;
 
-		LocalDate date = LocalDate.parse(beginningOfPeriod);
-
-		LocalDate lengthOfTheCycle = LocalDate.plusDays(cycleLength);
-
-		System.out.println(lengthOfTheCycle);
+		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate date = LocalDate.parse( beginningOfPeriod, dateFormat);
+		LocalDate  expected = date.plusDays(cycleLength);
 		
-
-
-		
-		
-	case 2:
-		System.out.println("Acne-prone skin is a one of the symthoms that tells that your period is aproaching");
-
-		System.out.print("Enter the first day of the last day you saw your period using the format (DD-MM-YY): ");
-		beginningOfPeriod = scan.next();
-
-		System.out.print("How Long is your average cycle:  ");
-		cycleLength = scan.nextInt();
-
-		break;
-
-	case 3:
-		System.out.println("Menstrual cramps is a one of the symthoms that tells that your period is aproaching ");
-
-		System.out.print("Enter the first day of the last day your saw your period using the format (DD-MM-YY) ");
-		beginningOfPeriod = scan.next();
-
-
-		System.out.print("How Long is your average cycle: ");
-		cycleLength = scan.nextInt();
-
-		
-
-
-	case 4:
-		System.out.println("Mood swings is a one of the symthoms that tells that your period is aproaching");
-
-		System.out.print("Enter the first day of the last day you saw your period using the format (DD-MM-YY) ");
-		beginningOfPeriod = scan.next();
-
-
-		System.out.print("How Long is your average cycle:  ");
-		cycleLength = scan.nextInt();
-
-		
-		break;
-
-
-	case 5:
-		System.out.println("Feeling bloated is a one of the symthoms that tells that your period is aproaching!");
-
-		System.out.print("Enter the first day of the last day you saw your period using the format (DD-MM-YY) ");
-		beginningOfPeriod = scan.next();
-
-
-		System.out.print("How Long is your average cycle:  ");
-		cycleLength = scan.nextInt();
-
-		
-		break;
-
-	case 6:
-		System.out.println("Feeling very tired is a one of the symthoms that tells that your period is aproaching!");
-
-		System.out.print("Enter the first day of the last day your saw your period using the format (DD-MM-YY) ");
-		beginningOfPeriod = scan.next();
-
-
-		System.out.print("How Long is your average cycle:  ");
-		cycleLength = scan.nextInt();
-
-		
-
-		break;
-
-	case 7:
-		System.out.println("Dry discharge is a one of the symthoms that tells that your period is aproaching!");
-
-		System.out.print("Enter the first day of the last day you saw your period using the format (DD-MM-YY)  ");
-		beginningOfPeriod = scan.next();
-
-		System.out.print("How Long is your average cycle: ");
-		cycleLength = scan.nextInt();
-		
-		break;
-
-	default:
-		System.out.println("Oops!! you entered the wrong input...");
-
+		LocalDate ovo = expected.minusDays(ovulation);
 	
-	}
+		System.out.println("Hello, " + userName + " you next menstruation will start  on the " + expected.format(dateFormat));
+		System.out.println("Your Ovulation period starts from" + ovo);
+		break;
 
-	}
+		}
+		
 
-	
-	
+		default:
+			System.out.println("Hey beautiful, Looks like you typed the wrong input,\ntake a depth breathe! Dont worry you are not pregnant yet...");
+			System.out.println();
+			
+		
+		}
 
 	
 	}
