@@ -85,20 +85,35 @@ ___________________________________________________________
 		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDate date = LocalDate.parse( beginningOfPeriod, dateFormat);
 		LocalDate  expected = date.plusDays(cycleLength);
-		
+
+		int fertile = 5;
+		int safeDate = 5;		
+
 		LocalDate ovo = expected.minusDays(ovulation);
+		LocalDate fertility = ovo.minusDays(fertile);
+		LocalDate safePeriod = fertility.plusDays(safeDate);
 	
-		System.out.println("Hello, " + userName + " you next menstruation will start  on the " + expected.format(dateFormat));
-		System.out.println("Your Ovulation period starts from" + ovo);
+		System.out.println("_____________________________________________________________________________________");
+		System.out.println(".....................................................................................");
+		System.out.println("Hello " + userName + "," + " your next menstruation will start  on the " + expected.format(dateFormat) + "i would advice you run away from any man if you dont want to get pregnant soon");
+		System.out.println();
+		System.out.println("Your Ovulation period is " + ovo);
+		System.out.println();
+		System.out.println("You fertility period is " + fertile);
+		System.out.println("your safe period  is " + safeDate + "\nDo quick and find man ");
+		System.out.println("____________________________________________________________________________________");
+		System.out.println(".....................................................................................");
+		System.out.println();
 		break;
 
 		}
-		
 
-		default:
+		if(questions.equals(false)){
 			System.out.println("Hey beautiful, Looks like you typed the wrong input,\ntake a depth breathe! Dont worry you are not pregnant yet...");
 			System.out.println();
 			
+
+		}
 		
 		}
 
