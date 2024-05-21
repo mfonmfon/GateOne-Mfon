@@ -55,6 +55,7 @@ __________________________________________________________
 	6. Feeling very tired
 
 	7. Dry discharge
+	
 ___________________________________________________________
 ...........................................................
 	 """);
@@ -71,16 +72,10 @@ ___________________________________________________________
 		System.out.print("Enter the first day you saw your period using the format (DD-MM-YYYY): ");
 		String beginningOfPeriod = scan.next();
 
-		//if(beginning == "dd/MM/yyyy"){
-			//System.out.println("");
-
-		//}
-
 		System.out.println();
 		System.out.print("What is your average ovulution cycle length:  ");
 		int cycleLength = scan.nextInt();
 		int ovulation = 14;
-
 
 		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDate date = LocalDate.parse( beginningOfPeriod, dateFormat);
@@ -88,7 +83,6 @@ ___________________________________________________________
 
 		int fertile = 5;
 		int safeDate = 5;		
-
 		LocalDate ovo = expected.minusDays(ovulation);
 		LocalDate fertility = ovo.minusDays(fertile);
 		LocalDate safePeriod = fertility.plusDays(safeDate);
@@ -105,16 +99,14 @@ ___________________________________________________________
 		System.out.println(".....................................................................................");
 		System.out.println();
 		break;
-
 		}
-
-		if(questions.equals(false)){
+		if(!(questions.equals(0))){
 			System.out.println("Hey beautiful, Looks like you typed the wrong input,\ntake a depth breathe! Dont worry you are not pregnant yet...");
 			System.out.println();
 			
 
-		}
-		
+			}
+			
 		}
 
 	
